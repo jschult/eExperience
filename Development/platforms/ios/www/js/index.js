@@ -33,8 +33,7 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-		if (window.device.platform === 'iOS' && parseFloat(window.device.version) === 7.0)
-			StatusBar.overlaysWebView(false);
+		StatusBar.overlaysWebView(false);
         app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
