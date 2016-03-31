@@ -58,7 +58,8 @@ body {
 }
 
 .scroller {
-	position:absolute; z-index:1;
+	position:absolute; 
+    z-index:1;
 	-webkit-tap-highlight-color:rgba(0,0,0,0);
 	width:100%;
 	padding:0;

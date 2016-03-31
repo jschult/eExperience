@@ -34,16 +34,17 @@ body {
     -webkit-transform:translate3d(0,0,0);
     height: 100%;
     padding: 20px;
+    margin: 35px 20px 40px 20px; /* May have to chage the 40 px if content by bottom nav bar is effected */
 }
 
 #pageWrapper {
-    position:absolute;
+    position: absolute;
     z-index:1;
     overflow:hidden;
-    top:20px;
-    right:20px;
-    bottom:20px;
-    left:20px;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
 }
 
 #wrapper {
@@ -57,7 +58,8 @@ body {
 }
 
 .scroller {
-	position:absolute; z-index:1;
+	position:absolute; 
+    z-index:1;
 	-webkit-tap-highlight-color:rgba(0,0,0,0);
 	width:100%;
 	padding:0;
