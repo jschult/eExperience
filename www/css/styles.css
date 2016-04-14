@@ -48,7 +48,9 @@ body {
 }
 
 #wrapper {
-    position:absolute;
+    /*position:absolute;*/
+    margin-top: -14px;/* This will most likely need to be changed */
+    height:542px;
     z-index:1;
     top:0px;
     bottom:0px;
@@ -58,7 +60,7 @@ body {
 }
 
 .scroller {
-	position:absolute; 
+	position:relative; 
     z-index:1;
 	-webkit-tap-highlight-color:rgba(0,0,0,0);
 	width:100%;
