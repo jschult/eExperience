@@ -49,7 +49,8 @@ body {
 
 #wrapper {
     /*position:absolute;*/
-    height:500px;
+    margin-top: -14px;/* This will most likely need to be changed */
+    height:542px;
     z-index:1;
     top:0px;
     bottom:0px;

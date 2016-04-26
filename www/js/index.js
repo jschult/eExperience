@@ -48,3 +48,19 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
+function handleCollapsible(id) {
+    var clickedTitle = document.getElementById(id);
+    var contentC = clickedTitle.parentNode.children[1];
+    if (contentC.style.display == 'none') {
+        contentC.style.display = 'block';
+        var mysplittedtitle = clickedTitle.innerHTML.split(" ");
+        var newTitle = "- " + mysplittedtitle[1];
+        clickedTitle.innerHTML = newTitle;
+    } else {
+        contentC.style.display = 'none';
+        var mysplittedtitle = clickedTitle.innerHTML.split(" ");
+        var newTitle = "+ " + mysplittedtitle[1];
+        clickedTitle.innerHTML = newTitle;
+    }
+}
