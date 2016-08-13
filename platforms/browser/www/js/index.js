@@ -47,24 +47,5 @@ var app = {
 
         console.log('Received Event: ' + id);
     }
-<<<<<<< HEAD
-};
-=======
 };
 
-function handleCollapsible(id) {
-    var clickedTitle = document.getElementById(id);
-    var contentC = clickedTitle.parentNode.children[1];
-    if (contentC.style.display == 'none') {
-        contentC.style.display = 'block';
-        var mysplittedtitle = clickedTitle.innerHTML.split(" ");
-        var newTitle = "- " + mysplittedtitle[1];
-        clickedTitle.innerHTML = newTitle;
-    } else {
-        contentC.style.display = 'none';
-        var mysplittedtitle = clickedTitle.innerHTML.split(" ");
-        var newTitle = "+ " + mysplittedtitle[1];
-        clickedTitle.innerHTML = newTitle;
-    }
-}
->>>>>>> 24970ebefe9d2624ed1d89e2a5689e6221a68577
