@@ -27,11 +27,13 @@
   */
   
  /* Universal style rule */
-* {
+* 
+{
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
-body {
+body 
+{
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
@@ -51,11 +53,12 @@ body {
     font-size:18px;
     height:100%;
 	width:100%;
-	background-color: #666;
+	background-color: #EAEAEA;
 	margin: 0;
 }
 
-h1 {
+h1 
+{
     font-size:24px;
     font-weight:normal;
     margin:0px;
@@ -63,37 +66,50 @@ h1 {
     padding:0px;
     text-align:center;
 }
+
+hr	
+{
+	 border-color: #000; 		/* Chrome and Safari */
+	 background-color: #000; 	/* Firefox and Opera */
+	 color: #000;				/* IE7+ Rule */
+}
 /*
-li {
+li 
+{
 	float: left;
 	width: 33.33333%;
 }
 
-li a {
+li a 
+{
 	text-align: center;
 	text-decoration: none;
 	color: #000;
 }
 
-li a:active {
+li a:active 
+{
 	background-color: #999;
 }
 */
-ul {
+
+ul 
+{
 	list-style-type: none;
 	position: fixed;
 	width: 100%;
 	margin-top: 15px;
 	padding-left: 0;
-	background-color: #CCC;
+	/*background-color: #CCC;*/
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- *  This second section contains all of the style rules for CSS classes.
+ *  This second section contains all of the style rules for CSS classes and IDs, in alphabetical order.
  */
 
 /* Portrait layout (default) */
-.app {
+.app 
+{
     background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
     position:absolute;             /* position in the center of the screen */
     left:50%;
@@ -106,17 +122,32 @@ ul {
                                    /* offset horizontal: half of text area width */
 }
 
-.blink {
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) 
+{
+    .app 
+	{
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+.blink 
+{
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
 
-.content {
+.content 
+{
 	z-index: 0;
 	margin: 65px 10px 40px 10px;	
 }
 
-.event {
+.event 
+{
     border-radius:4px;
     -webkit-border-radius:4px;
     color:#FFFFFF;
@@ -125,72 +156,181 @@ ul {
     padding:2px 0px;
 }
 
-.event.listening {
-    background-color:#333333;
+.event.listening 
+{
+    /*background-color:#333333;*/
     display:block;
 }
 
-.event.received {
-    background-color:#4B946A;
+.event.received 
+{
+    /*background-color:#4B946A;*/
     display:none;
 }
 
-.logo_e {
+#faq 
+{
+	margin-top: 10px;
+}
+
+#faq h1
+{
+	font-size: 28px;
+	font-weight: bold;
+}
+
+#faq ol
+{
+	font-weight: bold;
+}
+
+#faq ol li
+{
+	font-weight: normal;
+}
+
+.frame 
+{
+    position:absolute;
+    top:30px;
+    right:50px;
+    bottom:20px;
+    left:50px;
+    background-color: #F1F2F2;
+    border: 1px solid #BCBEC0;
+    border-radius: 4px;
+}
+
+.heading
+{
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.logo_e 
+{
 	color: #F00;
 	text-transform: lowercase;
 }
 
-.logo_Experience {
+.logo_Experience 
+{
 	color: #000;
 }
 
-.logo_group {
+.logo_group 
+{
 	font: Arial;
 	font-weight: bold;
 	font-size: 18px;
 	float: left;
 	background: #FFF;
 	height: 40px;
-	width: 50%;
+	width: 49.47%;
 	margin: 0;
 	padding-top: 6px;
 	border: 2px solid #000;
 	text-align: center;
 }
 
-.menuBar {
+.menuBar 
+{
 	height: 44px;
 	background: #FFF;
 	text-align: center;
 	top: 0;
 	z-index: 2;
 	border-bottom: 1px solid #FFF;
-	box-shadow: rgba(0, 0, 0, 0.25) 0 1px 2px;
+	/*box-shadow: rgba(0, 0, 0, 0.25) 0 1px 2px;*/
 }
 
-.nav {
+.nav 
+{
 	width: 100%;
-	box-shadow: rgba(0, 0, 0, 0.25) 0 -1px 2px;	
+	/*box-shadow: rgba(0, 0, 0, 0.25) 0 -1px 2px;*/
+	margin-top: -15px;
 }
 
-.navButton {
+.navButtonL
+{
 	float: left;
-	background: #CCC;
+	background: #000;
 	height: 40px;
 	width: 25%;
 	margin: 0;
-	padding-top: 9px;
+	margin-left: 1px;
+	padding-top: 6px;
 	border-top: 2px solid #000;
 	border-bottom: 2px solid #000;
-	text-align: center;	
+	border-left: 2px solid #000;
+	border-radius: 10px 0px 0px 10px;
+	text-align: center;
+	cursor: pointer;
+	cursor: hand;
 }
 
-.navButton a {
-	color: #000;
+.navButtonL:hover
+{
+	color: #00F;
+}
+
+.navButtonR
+{
+	float: right;
+	clear: none;
+	background: #000;
+	height: 40px;
+	width: 25%;
+	margin: 0;
+	margin-right: 1px;
+	padding-top: 6px;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+	border-right: 2px solid #000;
+	border-radius: 0px 10px 10px 0px;
+	text-align: center;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.navButtonR:hover
+{
+	color: #00F;
+}
+
+.navButtonL a:link, .navButtonR a:link
+{
+	color: #FFF;
 	text-decoration: none;
+	font-weight: bold;
 }
 
-.pages {
+.page h1, .page h2
+{
+    color: #000;
+    font-weight: normal;
+    margin-top: 0px;
+}
+
+.page hr 
+{
+    height: 2px;
+    background-color: #000;
+    border: none;
+    border-bottom: solid 1px #FFFFFF;
+}
+
+.page 
+{
+    float: left;
+    -webkit-transform:translate3d(0,0,0);
+    height: 100%;
+    padding: 20px;
+    margin: 35px 20px 40px 20px; /* May have to chage the 40 px if content by bottom nav bar is effected */
+}
+
+.pages 
+{
 	height: 50px;
 	text-align: center;
 	background: #CCC;
@@ -202,27 +342,77 @@ ul {
 	border-top: 2px solid #000;	
 }
 
-.pages li {
+.pages li 
+{
 	padding-top: 12.5px;	
 }
 
-/* Landscape layout (with min-width) */
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-    .app {
-        background-position:left center;
-        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
-        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
-                                      /* offset horizontal: half of image width and text area width */
-    }
+#pageWrapper 
+{
+    position: absolute;
+    z-index:1;
+    overflow:hidden;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
 }
 
-@keyframes fade {
+.question
+{
+	cursor: pointer;
+	cursor: hand;
+	font-size: 24px;
+	font-weight: bold;
+	width: auto;
+}
+
+.question.active
+{
+	color: #33C;
+}
+
+.scroller 
+{
+	position:relative; 
+    z-index:1;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	width:100%;
+	padding:0;
+}
+
+.tip
+{
+	font-size: 12px;
+	color: #333;
+}
+
+#wrapper 
+{
+    /*position:absolute;*/
+    margin-top: -14px;/* This will most likely need to be changed */
+    height:542px;
+    z-index:1;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    overflow:auto;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  This third section contains any miscellaneous style rules.
+ */
+
+@keyframes fade 
+{
     from { opacity: 1.0; }
     50% { opacity: 0.4; }
     to { opacity: 1.0; }
 }
  
-@-webkit-keyframes fade {
+@-webkit-keyframes fade 
+{
     from { opacity: 1.0; }
     50% { opacity: 0.4; }
     to { opacity: 1.0; }
