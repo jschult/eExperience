@@ -367,7 +367,7 @@ ul
 	width: auto;
 }
 
-.question.active
+.question.active, .question:hover
 {
 	color: #33C;
 }
