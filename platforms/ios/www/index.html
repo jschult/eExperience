@@ -30,6 +30,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="http://mysqljs.com/mysql.js"></script>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
@@ -206,8 +207,17 @@
                             <div class="scroller">
                                 <h1>Page 3</h1>
                                 <hr/>
-                                <br/>
-                                <br/>
+                                <pre id="output12"></pre>
+								<script>
+								    MySql.Execute(
+								        "sql8.freemysqlhosting.net",
+								        "sql8110237", 
+								        "Gn1uMM2Adr", 
+								        "sql8110237", 
+								        "select * from Users", 
+								        function (data) {
+								        document.getElementById("output12").innerHTML = JSON.stringify(data,null,2);});
+								</script>
                                 <br/>
                                 <h2>Subtitle</h2>
                                 <hr/>
@@ -256,7 +266,6 @@
             <script src="js/iscroll.js"></script>
             <script src="js/scroll.js"></script>
         </div>
-        
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
