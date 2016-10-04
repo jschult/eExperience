@@ -1,6 +1,7 @@
 
 html, body {
 	height: 100%;
+	font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
 }
 body, ul, li, h1, h2, p {
 	padding: 0;
@@ -8,10 +9,9 @@ body, ul, li, h1, h2, p {
 	border: 0;
 }
 body {
-	font-size: 12px;
+	font-size: 18px;
 	-webkit-text-size-adjust: none;
-	font-family: helvetica;
-	background: #a00;
+	background: #EAEAEA;
 }
 #wrapper {
 	position: absolute;
@@ -19,7 +19,6 @@ body {
 	top: 60px;
 	bottom: 0;
 	width: 768px;
-	background: #aaa;
 	overflow: hidden;
 }
 #slider {
