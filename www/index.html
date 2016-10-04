@@ -35,6 +35,18 @@
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
+		
+		<script type="text/javascript" src="twis.js"></script>
+		
+		<script type="text/javascript">
+			var superScroll;
+			function loaded() {
+				superScroll = new TWIS('#wrapper');
+			}
+			
+			document.addEventListener('touchmove', function (e) {e.preventDefault();}, false);
+			window.addEventListener('load', loaded, false);
+		</script>
     </head>
     <body>
     	<div class="nav">
@@ -56,14 +68,139 @@
             </div>
         </div>
     -->
-    	<div class="pages">
+    	<!-- <div class="pages">
         	<ul>
             	<li><span class="glyphicon glyphicon-adjust"></span></li>
             </ul>
-        </div>
-		<div class="content">
+        </div> -->
+		<div id="wrapper">
+			<div id="slider">
+				<div class="page">
+					<h1>Frequently Asked Questions<br><span class="tip">(Tap questions to expand)</span></h1>
+									
+						<hr/>
+						<p class="question" data-toggle="collapse" data-target=".answer1">
+							What will I do at Springboard to Success?
+						</p>
+						<p class="answer1 collapse">
+							<span class="heading">June 23-24, June 28-29 & June 30-July 1 Agenda</span>
+							<br>
+							<a href="www.siue.edu/undergraduate/admitted/pdf/Springboard Student Agenda 2016.pdf"> 2016 Student Agenda</a>
+							<br>
+							<a href="www.siue.edu/undergraduate/admitted/pdf/Springboard Parent Agenda 2016.pdf">2016 Parent Agenda</a>
+							<br><br>
+							<span class="heading">July 29 & August 11 Agenda</span>
+							<br>
+							<a href="www.siue.edu/undergraduate/admitted/pdf/Springboard to Success 1-Day Sessions.pdf">2016 Student/Parent Agenda</a>
+							<br>
+						</p>
+						<hr>
+						<p class="question" data-toggle="collapse" data-target=".answer2">
+							Do I have to participate in all parts of Springboard to Success?
+						</p>
+						<p class="answer2 collapse">
+							Yes. All sessions are designed to give you the basics to start your education here at SIUE. You will also meet with an academic advisor and schedule your first semester of courses.
+						</p>
+						<hr>
+						<p class="question" data-toggle="collapse" data-target=".answer3">
+							What do parents/guests do at Springboard to Success?
+						</p>
+						<p class="answer3 collapse">
+							Here is a link to the <a href="www.siue.edu/undergraduate/admitted/pdf/Springboard Parent Agenda 2016.pdf">2016 Parent Agenda</a>. Note that for the 1-Day Springboard to Success sessions, there is a separate agenda: <a href="www.siue.edu/undergraduate/admitted/pdf/Springboard to Success 1-Day Sessions.pdf">2016 1-Day Agenda</a>.
+						</p>
+						<hr>
+						<p class="question" data-toggle="collapse" data-target=".answer4">
+							What should I bring to Springboard to Success?
+						</p>
+						<p class="answer4 collapse">
+							You will need to bring your student ID number (found in your admission packet), photo identification (such as a driver's license or state issued identification card), any personal items required for an overnight stay (we provide linens and towels, but other than this, if you need it to start or end your day, please bring it with you), comfortable clothing and shoes (you will be walking around campus), and a sweatshirt or jacket.
+						</p>
+						<hr>
+						<p class="question" data-toggle="collapse" data-target=".answer5">
+							Will I get my student ID at Springboard to Success?
+						</p>
+						<p class="answer5 collapse">
+							Yes. Students will have the opportunity to get their CougarCard at Springboard to Success. Be sure to bring a valid state photo identification (such as a driver's license). High School student ID cards will not be accepted.
+						</p>
+						<hr>
+						<p class="question" data-toggle="collapse" data-target=".answer6">
+							Can I turn in my health immunization forms at Springboard to Success?
+						</p>
+						<p class="answer6 collapse">
+							Yes. Please bring in your completed form you received in your admission packet. If you need one, you can <a href="www.siue.edu/healthservice/forms/pdf/Immunization 06-2015.pdf">download a new form</a>.
+						</p>
+						<hr>
+						<p class="question" data-toggle="collapse" data-target=".answer7">
+							Is there a charge for Springboard to Success?
+						</p>
+						<p class="answer7 collapse">
+							There is a non-refundable enrollment and registration fee for Springboard to Success.
+						</p>
+						<hr>
+						<p class="question" data-toggle="collapse" data-target=".answer8">
+							Can I come to any program I'd like?
+						</p>
+						<p class="answer8 collapse">
+							Springboard to Success session dates are limited to 200 students per session and are filled as space is available. You may select any date that best fits your summer schedule, as long as the date is still available. Please note: once you have selected a session date, it is difficult to change.
+						</p>
+						<hr>
+						<p class="question" data-toggle="collapse" data-target=".answer9">
+							Can parents/guests sit in on my Academic Advising session?
+						</p>
+						<p class="answer9 collapse">
+							Yes. Parents/guests are more than welcome to be a part of their students' academic advising. These sessions will be in group settings, but allow for individual time as well. Parents/guests will not be allowed to accompany their students during course registration. Unfortunately, the computer labs where the students will be registering are not conducive to parent/guest attendance.
+						</p>
+						<hr>
+						<p class="question" data-toggle="collapse" data-target=".answer10">
+							Can my parents/guests stay overnight in the residence halls?
+						</p>
+						<p class="answer10 collapse">
+							No. Parents/guests are responsible for making their own off-campus accomodations. Here is a website with <a href="www.siue.edu/maps/lodging.shtml">directions and a list of local accomodations</a>.
+						</p>
+						<hr>
+						<p class="question" data-toggle="collapse" data-target=".answer11">
+							Where can I park on campus?
+						</p>
+						<p class="answer11 collapse">
+							Students and parents/guests may park in Visitor Parking Lot B. There will be Springboard to Success Student Leaders in the parking lot from 11:30 a.m. to 12:30 p.m. If you enter Visitor Lot B before a Springboard Student Leader arrives at 11:30 a.m., you will need to pay at one of the Kiosks for parking. If you enter Visitor Lot B, you will need to pick up a two-day parking pass from the registration table in Morris University Center's Meridian Ballroom.
+						</p>
+						<hr>
+						<p class="question" data-toggle="collapse" data-target=".answer12">
+							Can I bring a friend who will not be attending SIUE as a new freshmen?
+						</p>
+						<p class="answer12 collapse">
+							No. Only SIUE admitted freshmen and their family members may attend Springboard to Success. A friend who would like to visit the campus is always welcome to contact the <a href="www.siue.edu/admissions/index.shtml">Office of Admissions</a> at (800) 447-SIUE to set up a tour.
+						</p>
+						<hr>
+						<p class="question" data-toggle="collapse" data-target=".answer13">
+							Will I have to take placement tests?
+						</p>
+						<p class="answer13 collapse">
+							You must complete all placement tests before attending Springboard to Success. To determine whether you need to take placement tests, contact the <a href="www.siue.edu/admissions/index.shtml">Office of Admissions</a> at (800) 447-SIUE or (618) 650-3705, or <a href="mailto:springboard@siue.edu" target="_blank">springboard@siue.edu</a>.
+						</p>
+						<hr>
+						<p class="question" data-toggle="collapse" data-target=".answer14">
+							How do I determine whether or not I am missing Financial Aid documents?
+						</p>
+						<p class="answer14 collapse">
+							<span class="heading">Steps for checking missing documents:</span>
+							<ol class="answer14 collapse">
+								<li>Go to <a href="www.siue.edu/cougarnet">Cougarnet</a></li>
+								<li>Click "Enter CougarNet with your e-ID" (1<sup>st</sup> option) or "Enter CougarNet with you University ID" (2<sup>nd</sup> option)</li>
+								<li>Click "Financial Aid" (3<sup>rd</sup> tab)</li>
+								<li>Click "Eligibility" (2<sup>nd</sup> option)</li>
+								<li>Click "Student Requirements" (1<sup>st</sup> tab)</li>
+								<li>Current Academic Year Requirements will appear</li>
+								<li>"Established" means the document must <strong>immediately</strong> be turned into Financial Aid</li>
+							</ol>
+						</p>
+						<hr>
+						<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+				</div>
+			</div>
+		</div>
 
-            <div id="pageWrapper">
+            <!-- <div id="pageWrapper">
                 <div id="pageScroller">
 
                     <div class="page">
@@ -276,6 +413,6 @@
 			$('.question').click(function () {
 				$(this).toggleClass('active');
 			});
-		</script>
+		</script> -->
     </body>
 </html>
