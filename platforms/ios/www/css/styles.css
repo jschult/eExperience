@@ -1,36 +1,184 @@
+/* File: styles.css
+ * Developed by: Geoff Cooley, Justin Schulte, Jared Becher
+ * Project: SIUE Experience Mobile Application
+ * Description: This file houses the CSS style rules for the app. It is separated into four sections: first is for HTML elements, 
+ *    second for IDs, and third section is for classes. The final section houses miscellaneous style rules.
+ *
+ * One unused class, .content, contained the following margin: 65px 10px 40px 10px; just in case it needs to be retained.
+ *
+ * There is one universal style rule that will be kept up here, in the comments if it is not used, and above the first section if used.
+ *   It sets the color of the highlight that appears over a link while it is being tapped. According to the Mozilla Developer page on this tag,
+ *   it's compatibility extends to WebKit/Safart and Blink/Chrome, and *some* versions of IE and Edge.
+ *
+ * * {
+ *	-webkit-tap-highlight-color: rgba(0,0,0,0);
+ * }
+ */
+ 
+/*
+ *  This section houses the style rules for HTML elements.
+ */
 
 html, body {
 	height: 100%;
+	font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
 }
+
 body, ul, li, h1, h2, p {
 	padding: 0;
 	margin: 0;
 	border: 0;
 }
+
 body {
-	font-size: 12px;
+	font-size: 14px;
 	-webkit-text-size-adjust: none;
-	font-family: helvetica;
-	background: #a00;
+	background: #EAEAEA;
 }
+
+h1 {
+	overflow: visible;
+	text-align: center;
+}
+
+h2 {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+hr {
+	border-color: #000;			/* Chrome and Safari */
+	background-color: #000;		/* Firefox and Opera */
+	color: #000;				/* IE7+ Rule */
+}
+
+p { margin-bottom: 1.2em; }
+
+/*
+ *  This section houses the style rules for the IDs used.
+ */
+ 
+#faq {
+	margin-top: 10px;
+}
+
+#faq h1 {
+	font-size: 22px;
+	font-weight: bold;
+}
+
+#faq h2 {
+	font-size: 18px;
+	font-weight: inherit;
+	text-decoration: inherit;
+}
+
+#nav {
+	width: 100%;
+	margin-top: -15px;
+}
+
+#nav ul {
+	list-style-type: none;
+	position: fixed;
+	width: 100%;
+	margin-top: 15px;
+	padding-left: 0;
+}
+
+/* Still need to work with active navButton styles, (active vs. hover, etc.) */
+
+#navButtonL {
+	float: left;
+	background: #000;
+	height: 40px;
+	width: 25%;
+	margin-left: 1px;
+	padding-top: 6px;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+	border-left: 2px solid #000;
+	border-radius: 10px 0px 0px 10px;
+	text-align: center;
+}
+
+#navButtonR {
+	float: right;
+	clear: none;
+	background: #000;
+	height: 40px;
+	width: 25%;
+	margin-right: 1px;
+	padding-top: 6px;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+	border-right: 2px solid #000;
+	border-radius: 0px 10px 10px 0px;
+	text-align: center;
+}
+
+#navButtonL a:link, #navButtonR a:link {
+	color: #FFF;
+	text-decoration: none;
+	font-weight: bold;
+}
+ 
 #wrapper {
 	position: absolute;
 	z-index: 1;
-	top: 60px;
+	margin-top: -14px;
+	top: 0;
 	bottom: 0;
 	width: 768px;
-	background: #aaa;
 	overflow: hidden;
 }
+
 #slider {
 	position: relative;
 	z-index: 1;
 	float: left;
-	width: 3072px;
+	width: 2304px;
 	height: 100%;
 	font-size: 2em;
 	-webkit-transform: translate3d(0,0,0);
 }
+
+/*
+ *  This section houses the style rules for the classes used.
+ */
+ 
+.logo_e {
+	color: #F00;
+	text-transform: underline;
+}
+
+.logo_Experience {
+	color: #000;
+}
+
+.logo_group {
+	font: Arial;
+	font-weight: bold;
+	font-size: 18px;
+	float: left;
+	background: #FFF;
+	height: 40px;
+	width: 49.47%;
+	padding-top: 6px;
+	border: 2px solid #000;
+	text-align: center;
+}
+ 
+.question {
+	font-size: 18px;
+	font-weight: bold;
+	width: auto;
+}
+
+.question:active, .question:hover {
+	color: #33C;
+}
+ 
 .page {
 	-webkit-box-sizing: border-box;
 	position: relative;
@@ -38,11 +186,19 @@ body {
 	display: block;
 	float: left;
 	width: 768px;
-	background: #fff;
-	padding: 1em;
+	height: 100%;
+	background: #FFF;
+	padding: 20px;
+	margin: 35px 20px 40px 20px; /* May have to change bottom margin if bottom bar is changed */
 	-webkit-transform: translate3d(0,0,0);
 }
-p { margin-bottom: 1.2em; }
+
+.tip {
+	font-size: 10px;
+	color: #333;
+}
+
+
 @media only screen and (orientation: landscape) {
 	#wrapper {
 		width: 1024px !important;
