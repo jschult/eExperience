@@ -8,7 +8,7 @@
  *
  * There is one universal style rule that will be kept up here, in the comments if it is not used, and above the first section if used.
  *   It sets the color of the highlight that appears over a link while it is being tapped. According to the Mozilla Developer page on this tag,
- *   it's compatibility extends to WebKit/Safart and Blink/Chrome, and *some* versions of IE and Edge.
+ *   its compatibility extends to WebKit/Safari and Blink/Chrome, and *some* versions of IE and Edge.
  *
  * * {
  *	-webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -67,20 +67,12 @@ p { margin-bottom: 1.2em; }
 	font-weight: bold;
 }
 
-#faq h2 {
-	font-size: 18px;
-	font-weight: inherit;
-	text-decoration: inherit;
-}
-
 #nav {
-	width: 100%;
 	margin-top: -15px;
 }
 
 #nav ul {
 	list-style-type: none;
-	position: fixed;
 	width: 100%;
 	margin-top: 15px;
 	padding-left: 0;
@@ -90,6 +82,7 @@ p { margin-bottom: 1.2em; }
 
 #navButtonL {
 	float: left;
+	clear: none;
 	background: #000;
 	height: 40px;
 	width: 25%;
@@ -102,7 +95,38 @@ p { margin-bottom: 1.2em; }
 	text-align: center;
 }
 
+#navButtonL li {
+	list-style-type: none;
+	position: fixed;
+	margin-top: 15px;
+	width: 25%;
+	margin-left: 1px;
+	padding-top: 6px;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+	border-left: 2px solid #000;
+	border-radius: 10px 0px 0px 10px;
+	text-align: center;
+	
+}
+
 #navButtonR {
+	float: right;
+	clear: none;
+	background: #000;
+	height: 40px;
+	width: 25%;
+	margin-right: 1px;
+	padding-top: 6px;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+	border-right: 2px solid #000;
+	border-radius: 0px 10px 10px 0px;
+	text-align: center;
+}
+
+#navButtonR li {
+	list-style-type: none;
 	float: right;
 	clear: none;
 	background: #000;
@@ -122,15 +146,19 @@ p { margin-bottom: 1.2em; }
 	text-decoration: none;
 	font-weight: bold;
 }
- 
-#wrapper {
-	position: absolute;
-	z-index: 1;
-	margin-top: -14px;
-	top: 0;
-	bottom: 0;
-	width: 768px;
-	overflow: hidden;
+
+#schedule {
+	margin-top: 10px;
+}
+
+#schedule h1 {
+	font-size: 22px;
+	font-weight: bold;
+}
+
+#schedule h2 {
+	font-size: 18px;
+	font-weight: bold;
 }
 
 #slider {
@@ -142,10 +170,34 @@ p { margin-bottom: 1.2em; }
 	font-size: 2em;
 	-webkit-transform: translate3d(0,0,0);
 }
+ 
+#wrapper {
+	position: relative;
+	z-index: 1;
+	width: 768px;
+	overflow: auto;
+}
 
 /*
  *  This section houses the style rules for the classes used.
  */
+ 
+ .answer {
+	font-size: 14px; 
+ }
+ 
+ .day {
+	 font-size: 18px;
+	 font-weight: bold;
+	 width: auto;
+ }
+ 
+ .event {
+	 font-size: 16px;
+	 font-weight: bold;
+	 width: auto;
+	 margin-left: 15px;
+ }
  
 .logo_e {
 	color: #F00;
@@ -185,8 +237,8 @@ p { margin-bottom: 1.2em; }
 	z-index: 2;
 	display: block;
 	float: left;
-	width: 768px;
-	height: 100%;
+	width: 15%;
+	height: 90%;
 	background: #FFF;
 	padding: 20px;
 	margin: 35px 20px 40px 20px; /* May have to change bottom margin if bottom bar is changed */
@@ -198,7 +250,7 @@ p { margin-bottom: 1.2em; }
 	color: #333;
 }
 
-
+/*
 @media only screen and (orientation: landscape) {
 	#wrapper {
 		width: 1024px !important;
@@ -210,3 +262,4 @@ p { margin-bottom: 1.2em; }
 		width: 1024px !important;
 	}
 }
+*/
