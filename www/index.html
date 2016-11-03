@@ -41,9 +41,10 @@ window.addEventListener('load', loaded, false);
 <body>
 <header>
 	<ul>
-		<li id="navButtonL"><!--Open Twitter in browser-->Twitt<span class="logo_e">e</span>r</li>
+	<!-- Konstantin Rudy: https://github.com/k-rudy/phonegap-twitter-timeline -->
+		<li id="navButtonL" onclick="twitter()"><!--Open Twitter in browser-->Twitt<span class="logo_e">e</span>r</li>
 		<li id="logo_group"><span class="logo_e">e</span>Experience</li>
-		<li id="navButtonR"><!--Open Qualtrix in browser-->Surv<span class="logo_e">e</span>ys</li>
+		<li id="navButtonR" onclick="surveys()"><!--Open Qualtrix in browser-->Surv<span class="logo_e">e</span>ys</li>
 	</ul>
 </header>
 
@@ -85,6 +86,7 @@ window.addEventListener('load', loaded, false);
 	</div> <!--slider-->
 </div> <!--wrapper-->
 </body>
+<script type="text/javascript" src="cordova.js"></script>>
 <script type="text/javascript" src="index.js"></script>
 <script type="text/javascript">
 	app.initialize();
