@@ -13,18 +13,18 @@ body {
 /*	-webkit-user-select:none;*/
     -webkit-text-size-adjust: none;
 	font-family: helvetica;
-	background: #CCC;
+	background: #000;
 }
 
 header {
 	height: 40px; 
 	line-height: 40px;
 	/*display: block*/
-	background: #CCC;
+	background: #000;
 	font-size: 2em; 
 	font-weight: bold;
 	text-align: center;
-	margin-top: 20px;
+	margin-top: 2px;
 	margin-left: 1px;
 }
 
@@ -36,13 +36,26 @@ header ul {
 
 hr {
 	border: 1px solid #000;
+	margin-bottom: 2em;
 }
 
 p { 
-	margin-bottom: 1.2em; 
+	margin-bottom: 2em; 
 }
 
 #logo_group {
+	font: Arial;
+	font-weight: bold;
+	font-size: 18px;
+	color: #000;
+	float: left;
+	background: #FFF;
+	width: 50vw;
+	border: 1px solid #000;
+	text-align: center;
+}
+
+#logo_group_b {
 	font: Arial;
 	font-weight: bold;
 	font-size: 18px;
@@ -66,16 +79,28 @@ p {
 	text-align: center;
 }
 
-#navButtonL a:link, #navButtonR a:link {
+#navButtonL_b, #navButtonR_b {
+	font: Arial;
+	font-weight: bold;
+	font-size: 18px;
+	color: #FFF;
+	float: left;
+	clear: none;
+	background: #000;
+	width: 24vw;
+	text-align: center;
+}
+
+#navButtonL a:link, #navButtonL_b a:link, #navButtonR a:link, #navButtonR_b a:link {
 	color: #FFF;
 }
 
-#navButtonL a:hover, #navButtonR a:hover {
+#navButtonL a:hover, #navButtonL_b a:hover, #navButtonR a:hover, #navButtonR_b a:hover {
 	color: #000;
 	background: #FFF;
 }
 
-#navButtonL {
+#navButtonL, #navButtonL_b {
 	border-top: 1px solid #000;
 	border-bottom: 1px solid #000;
 	border-left: 1px solid #000;
@@ -83,7 +108,7 @@ p {
 	margin-left: 2px;
 }
 
-#navButtonR {
+#navButtonR, #navButtonR_b {
 	border-top: 1px solid #000;
 	border-bottom: 1px solid #000;
 	border-right: 1px solid #000;
@@ -94,10 +119,10 @@ p {
 #wrapper {
 	position: absolute;
 	z-index: 1;
-	top: 65px; 
+	top: 46px; 
 	bottom: 2px;
 	width: 98vw;
-	background: #CCC;
+	background: #F00;
 	overflow: hidden;
 }
 
@@ -106,7 +131,7 @@ p {
 	z-index: 1;
 	float: left;
 	width: 300vw;
-	height: 100%;
+	min-height: 100vh;
 	-webkit-transform: translate3d(0,0,0);
 }
 
@@ -125,10 +150,11 @@ p {
 	display: block;
 	float: left;
 	width: 95vw;
+	min-height: 100vh;
 	padding-top: 5px;
 	padding-left: 5px;
 	padding-right: 2em;
-	margin-left: 12px;
+	margin-left: 8px;
 	background: #FFF;
 	-webkit-transform: translate3d(0,0,0);
 	border-radius: 5px;
