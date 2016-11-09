@@ -50,9 +50,9 @@ var app = {
 };
 
 function twitter(){
-    var ref = window.open('twitterfeed.html', '_blank', 'location=no');    
+    var ref = window.open('html/twitterfeed.html', '_blank', 'location=no');    
 };
 
 function surveys(){
-    var ref = window.open('surveys.html', '_blank', 'location=no');    
+    var ref = window.open('html/surveys.html', '_blank', 'location=no');    
 };

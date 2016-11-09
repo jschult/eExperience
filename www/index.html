@@ -9,8 +9,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="twis.js"></script>
-<link href="style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/twis.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css">
 
 <script type="text/javascript">
 var myScroll;
@@ -41,22 +41,21 @@ window.addEventListener('load', loaded, false);
 <header>
 	<ul>
 	<!-- Konstantin Rudy: https://github.com/k-rudy/phonegap-twitter-timeline -->
-		<li id="navButtonL" onclick="twitter()"><!--Open Twitter in browser-->Twitt<span class="logo_e">e</span>r</li>
+		<li id="navButtonL" onclick="twitter()"><!--Open Twitter in-app-browser-->Twitt<span class="logo_e">e</span>r</li>
 		<li id="logo_group"><span class="logo_e">e</span>Experience</li>
-		<li id="navButtonR" onclick="surveys()"><!--Open Qualtrix in browser-->Surv<span class="logo_e">e</span>ys</li>
+		<li id="navButtonR" onclick="surveys()"><!--Open Qualtrix in-app-browser-->Surv<span class="logo_e">e</span>ys</li>
 	</ul>
 </header>
 
 <div id="wrapper">
 	<div id="slider">
 		<div class="page">
-			<h1>Welcome to the<br> SIUE eExperience<br> Mobile Application!</h1>
+			<img src="img/welcome.png" style="height:auto;width:100%;padding-top:4%;">
 			<hr>
-			<p>This application was designed to serve as a companion to the New Student Orientation program for Southern Illinois University Edwardsville. The app is designed to hold three pages, which users can swipe right to discover. This first page will serve as the Welcome page, explaining the purpose of the SIUE Experience program. The second page, to the right of this one, will house a day-by-day schedule for the SIUE Experience. The third page will house a series of helpful links for new students to SIUE, followed by a list of Frequently Asked Questions. The schedule and Links/FAQ pages will feature headings that can be tapped to expand or collapse the content within. The rest of the content on these demo pages are in Latin, so enjoy!</p>
-			<h2>Heading 2</h2>
-			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-			<h3>Heading 3</h3>
-			<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+			<p align="center">Welcome to the eExperience mobile app! This app is designed to assist students during <span style="font-weight: bold;">The SIUE Experience<span>!</p>
+			<h2 align="center"><span class="tip">(Swipe and Scroll to view content)</span></h2>
+			<hr>
+			<img src="img/welcome2.png" style="height:auto;width:100%;padding-bottom:6%;">
 		</div>
 
 		<div class="page">
