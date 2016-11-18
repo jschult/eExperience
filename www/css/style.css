@@ -140,6 +140,16 @@ p {
 	color: #33C;
 }
 
+.day {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.day1events, .day2events, .day3events, .day4events {
+	font-size: 18px;
+	font-weight: bold;
+}
+
 .logo_e {
 	color: #F00;
 }
