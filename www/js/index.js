@@ -50,9 +50,61 @@ var app = {
 };
 
 function twitter(){
-    var ref = window.open('html/twitterfeed.html', '_blank', 'location=no');    
+    var ref = window.open('twitterfeed.html', '_blank', 'location=no');    
 };
 
 function surveys(){
-    var ref = window.open('html/surveys.html', '_blank', 'location=no');    
+    var ref = window.open('surveys.html', '_blank', 'location=no');    
 };
+
+$(document).ready(function(){
+    $(document).bind('deviceready', function(){
+        onDeviceReady();
+    });
+    var output = $('#surveys');
+
+    $.ajax({
+        url: 'https://siueexperience.isg.siue.edu/survey.php',
+        dataType: 'jsonp',
+        jsonp: 'jsoncallback',
+        timeout: 5000,
+        success: function(data, status){
+            $.each(data, function(i,item){ 
+                var survey = '<p><a href="' 
+                    + item.link + '" onclick="window.open(' + "'" 
+                    + item.link + "', '_system');" + '">' 
+                    + item.title + '</a></p>';
+                output.append(survey);
+            });
+        },
+        error: function(){
+           output.text('There was an error loading the data.');
+        }
+    });
+});
+
+$(document).ready(function(){
+    $(document).bind('deviceready', function(){
+        onDeviceReady();
+    });
+    var output = $('#links');
+
+    $.ajax({
+        url: 'https://siueexperience.isg.siue.edu/links.php',
+        dataType: 'jsonp',
+        jsonp: 'jsoncallback',
+        timeout: 5000,
+        success: function(data, status){
+            $.each(data, function(i,item){ 
+                var link = '<p><a href="' 
+                    + item.description + '" onclick="window.open(' + "'" 
+                    + item.description + "', '_system');" + '">' 
+                    + item.title + '</a></p>';
+                output.append(link);
+            });
+        },
+        error: function(){
+           output.text('There was an error loading the data.');
+        }
+    });
+});
