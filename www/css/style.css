@@ -16,6 +16,10 @@ body {
 	background: #000;
 }
 
+button {
+	border-radius: 10px 10px 0px 0px;
+}
+
 header {
 	height: 40px; 
 	line-height: 40px;
@@ -150,6 +154,21 @@ p {
 	font-weight: bold;
 }
 
+.event {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.eventdesc {
+	font-size: 14px;
+	margin-top: -2.5px;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	border-radius: 0px 0px 10px 10px;
+	background-color: #DDD;
+}
+
 .logo_e {
 	color: #F00;
 }
@@ -166,6 +185,7 @@ p {
 	padding-left: 2%;
 	padding-right: 2%;
 	margin-left: 0.7%;
+	margin-bottom: 15vh;
 	background: #FFF;
 	-webkit-transform: translate3d(0,0,0);
 	border-radius: 5px;

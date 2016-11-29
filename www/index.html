@@ -13,11 +13,9 @@
 <link href="css/style.css" rel="stylesheet" type="text/css">
 
 <script type="text/javascript">
-var myScroll;
-
 function loaded() {
 	myScroll = new TWIS('#wrapper');
-
+	
 /*
 	// Test scrollY and scrollToPage
 	setTimeout(function () {
@@ -28,11 +26,11 @@ function loaded() {
 		myScroll.scrollY(-1000, 1500);
 	}, 2000);
 */
-
 	// Free some mem
 	window.removeEventListener('load', loaded, false);
 }
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+window.addEventListener('click', function (e) { e.preventDefault(); }, false);
 window.addEventListener('load', loaded, false);
 </script>
 
@@ -62,131 +60,140 @@ window.addEventListener('load', loaded, false);
 			<h2>Schedule</h2><hr>
 			<p class="day"> Thursday, August 18, 2016</p>
 				<button class="accordion">Residence Hall Move-In<br>8:00 am - 4:00 pm</button>
-				<div class="panel">
-					<p>Bluff/Prairie/Woodland Halls<br>
+				<div class="panel eventdesc">
+					<p>Bluff/Prairie/Woodland Halls<br><br>
 					The SIUE Experience begins for many new freshmen today! Hundreds of Move-In Crew volunteers make this process incredibly smooth so you’ll be on your way to unpack and unwind in no time. More information about University Housing Move-In is available at siue.edu/housing/movein.
 					Share your move-in pics using #SIUE20 and #SIUEExperience!</p>
 				</div>
 				<button class="accordion">Community Meetings<br>4:30 am - 6:00 pm</button>
-				<div class="panel">
-					<p>Bluff/Prairie/Woodland Halls<br>
+				<div class="panel eventdesc">
+					<p>Bluff/Prairie/Woodland Halls<br><br>
 					Check with your Resident Assistant (RA) for location
 					Living on campus is about more than just a place to sleep and study. This required orientation will help you be successful living in a new community. Check with your RA for speci c time and location.</p>
 				</div>
 				<button class="accordion">Commuter Meet-Up<br>5:00 pm - 5:30 pm</button>
-				<div class="panel">
-					<p>Morris University Center (MUC)<br>Living off campus this year? It is important to us that you are fully able to participate in the SIUE Experience! Come meet other new commuter students and then head downstairs to enjoy Freshman First Night together.</p>
+				<div class="panel eventdesc">
+					<p>Morris University Center (MUC)<br><br>
+					Living off campus this year? It is important to us that you are fully able to participate in the SIUE Experience! Come meet other new commuter students and then head downstairs to enjoy Freshman First Night together.</p>
 				</div>
 				<button class="accordion">Freshman First Night<br>6:00 pm</button>
-				<div class="panel">
-					<p>Morris University Center (MUC)<br>Class of 2020, join fellow  rst-year students for an unforgettable night packed with laughter, glowing entertainment and the best food on campus! Experience the MUC’s many dining options (bring your Cougar Card with meal plan or cash). Step into
+				<div class="panel eventdesc">
+					<p>Morris University Center (MUC)<br><br>
+					Class of 2020, join fellow  rst-year students for an unforgettable night packed with laughter, glowing entertainment and the best food on campus! Experience the MUC’s many dining options (bring your Cougar Card with meal plan or cash). Step into
 					the Illumabooth to create a glow photo or dress up with props at the open-air photo booth. Get a sugar rush from cotton candy or escape into the video game lounge. Be sure to stop by Cougar Lanes for a game of pool or Cosmic Bowling. Feeling crafty? Decorate a picture frame to remember the event, or make your own Spin Art creation. At the end of the night, show off your dance moves during the DJ dance party!
 					Post pics using #FFN2016 #SIUE20 #SIUEExperience</p>
 				</div>
 
 			<p class="day"> Friday, August 19, 2016</p>
 				<button class="accordion">Dining Services<br>7:30 am - 6:00 pm</button>
-				<div class="panel">
-					<p>Morris University Center (MUC)<br>Enjoy campus dining options like Center Court and Starbucks to fuel up for a busy day of The SIUE Experience. Meal plans, cash and credit cards accepted.</p>
+				<div class="panel eventdesc">
+					<p>Morris University Center (MUC)<br><br>
+					Enjoy campus dining options like Center Court and Starbucks to fuel up for a busy day of The SIUE Experience. Meal plans, cash and credit cards accepted.</p>
 				</div>
 				<button class="accordion">Commuter Welcome Breakfast<br>8:00 am - 8:45 am</button>
-				<div class="panel">
-					<p>MUC Fixins Restaurant<br>If you are living off campus this year, make this your  rst stop for a light breakfast and information about The SIUE Experience! Meet your Cougar Guide, along with other commuter students, and enter a drawing for gas gift cards and other cool prizes.</p>
+				<div class="panel eventdesc">
+					<p>MUC Fixins Restaurant<br><br>
+					If you are living off campus this year, make this your  rst stop for a light breakfast and information about The SIUE Experience! Meet your Cougar Guide, along with other commuter students, and enter a drawing for gas gift cards and other cool prizes.</p>
 				</div>
 				<button class="accordion">The SIUE Experience: Excellence, Integrity, Wisdom, Inclusion<br>9:00 am</button>
-				<div class="panel">
-					<p>location<br>description</p>
+				<div class="panel eventdesc">
+					<p>location<br>
+						<ul>
+							<li>description</li>
+							<li>description</li>
+						</ul>
+					</p>
 				</div>
 				<button class="accordion">New Student Convocation: Your SIUE Story Begins<br>12:00 pm</button>
-				<div class="panel">
+				<div class="panel eventdesc">
 					<p>location<br>description</p>
 				</div>
 				<button class="accordion">Class of 2020 Photo<br>12:45 pm</button>
-				<div class="panel">
+				<div class="panel eventdesc">
 					<p>location<br>description</p>
 				</div>
 				<button class="accordion">Commuter Meet-Up<br>1:00 pm - 1:15 pm</button>
-				<div class="panel">
+				<div class="panel eventdesc">
 					<p>location<br>description</p>
 				</div>
 				<button class="accordion">SIUE Central<br>2:00 pm - 4:30 pm</button>
-				<div class="panel">
+				<div class="panel eventdesc">
 					<p>location<br>description</p>
 				</div>
 				<button class="accordion">Tailgate Dinner<br>4:30 pm - 5:30 pm</button>
-				<div class="panel">
+				<div class="panel eventdesc">
 					<p>location<br>description</p>
 				</div>
 				<button class="accordion">Buses to Korte Stadium for Cougar Kick-Off!<br>5:30 pm - 6:00 pm</button>
-				<div class="panel">
+				<div class="panel eventdesc">
 					<p>location<br>description</p>
 				</div>
 				<button class="accordion">Cougar Kick-Off!<br>6:00 pm - 10:00 pm</button>
-				<div class="panel">
+				<div class="panel eventdesc">
 					<p>location<br>description</p>
 				</div>
 
 			<p class="day"> Saturday, August 20, 2016</p>
 				<button class="accordion">Dining Services<br>7:30 am - 10:00 pm</button>
-				<div class="panel">
+				<div class="panel eventdesc">
 					<p>location<br>description</p>
 				</div>
 				<button class="accordion">The SIUE Experience: Citizenship<br>8:45 am - 9:15 am</button>
-				<div class="panel">
+				<div class="panel eventdesc">
 					<p>location<br>description</p>
 				</div>
 				<button class="accordion">Class of 2020 Service Project<br>9:15 am - 1:00 pm</button>
-				<div class="panel">
+				<div class="panel eventdesc">
 					<p>location<br>description</p>
 				</div>
 				<button class="accordion">Be Greek BBQ<br>5:00 pm - 7:00 pm</button>
-				<div class="panel">
+				<div class="panel eventdesc">
 					<p>location<br>description</p>
 				</div>
 				<button class="accordion">Commuter Meet-Up<br>7:00 pm - 7:30 pm</button>
-				<div class="panel">
+				<div class="panel eventdesc">
 					<p>location<br>description</p>
 				</div>
 				<button class="accordion">Hypnotist Chris Carter<br>7:30 pm</button>
-				<div class="panel">
+				<div class="panel eventdesc">
 					<p>location<br>description</p>
 				</div>
 
 			<p class="day"> Sunday, August 21, 2016</p>
 				<button class="accordion">Dining Services<br>10:30 am - 10:00 pm</button>
-				<div class="panel">
+				<div class="panel eventdesc">
 					<p>location<br>description</p>
 				</div>
 				<button class="accordion">VIP Veterans<br>10:00 am - 11:00 am</button>
-				<div class="panel">
+				<div class="panel eventdesc">
 					<p>location<br>description</p>
 				</div>
 				<button class="accordion">Top Tips for Transfers<br>11:00 am - 1:00 pm</button>
-				<div class="panel">
+				<div class="panel eventdesc">
 					<p>location<br>description</p>
 				</div>
 				<button class="accordion">Be a Great Graduate Student<br>12:00 pm - 1:00 pm</button>
-				<div class="panel">
+				<div class="panel eventdesc">
 					<p>location<br>description</p>
 				</div>
 				<button class="accordion">SIUE Central<br>1:00 pm - 3:00 pm</button>
-				<div class="panel">
+				<div class="panel eventdesc">
 					<p>location<br>description</p>
 				</div>
 				<button class="accordion">Do SOMETHING!<br>1:00 pm - 3:00 pm</button>
-				<div class="panel">
+				<div class="panel eventdesc">
 					<p>location<br>description</p>
 				</div>
 				<button class="accordion">Commuter Meet-Up<br>2:30 pm - 3:00 pm</button>
-				<div class="panel">
+				<div class="panel eventdesc">
 					<p>location<br>description</p>
 				</div>
 				<button class="accordion">Bump, Set, Spike...and Sweets<br>3:00 pm - 5:00 pm</button>
-				<div class="panel">
+				<div class="panel eventdesc">
 					<p>location<br>description</p>
 				</div>
 				<button class="accordion">Wing Meetings<br>7:00 pm</button>
-				<div class="panel">
+				<div class="panel eventdesc">
 					<p>location<br>description</p>
 				</div>
 
@@ -198,54 +205,54 @@ window.addEventListener('load', loaded, false);
 			<h2>Frequently Asked Questions<br><span class="tip">(Tap questions to expand/collapse)</span></h2><br>
 			
 			<button class="accordion">Where do I get my books?</button>
-			<div class="panel">
+			<div class="panel eventdesc">
 				<p>Textbook Service, located at 200 University Park Drive, Room 1121, rents textbooks to undergraduate students for a nominal fee. Supplemental texts, graduate textbooks, and other classroom supplies are sold through the University Bookstore which is located on the first floor of the Morris University Center. For information about Textbook Service, call (618) 650-3020 or e-mail to textbook@siue.edu. Additional information may be obtained from the website, see helpful links.
 				THE SIUE Experience will also be hosting “trips to Textbook Services” during our SIUE Central session. Please check the SIUE Experience schedule for more details!
 				</p>
 			</div>
 
 			<button class="accordion">Where do I get a parking permit?</button>
-			<div class="panel">
+			<div class="panel eventdesc">
 				<p>Parking Services manages the sale of hang tags for parking on University premises. All students who park a vehicle on University property must purchase and display a current, valid SIUE permit. For Parking information, please consult the helpful links.</p>
 			</div>
 
 			<button class="accordion">Where can I find a job on campus?</button>
-			<div class="panel">
+			<div class="panel eventdesc">
 				<p>The student employment staff of Student Financial Aid maintains a database of on-campus and off-campus jobs online, see helpful links. Students meeting University eligibility requirements for student employment can search the database for information on jobs and employers. As many as 1,000 jobs may be listed at peak employment periods. Students needing further assistance may call (618) 650-2563, or visit the office in Rendleman Hall, Room 2221.</p>
 			</div>
 
 			<button class="accordion">Where is _______ (EVEYTHING)?</button>
-			<div class="panel">
+			<div class="panel eventdesc">
 			  <p>See Campus Map. (helpful links)</p>
 			</div>
 
 			<button class="accordion">What can I use my ID card (Cougar Card) for?</button>
-			<div class="panel">
+			<div class="panel eventdesc">
 				<p>Your Cougar Card is an all-purpose card that is required for identification, meal plans, debit plans, vending, admittance to SIUE buildings and event. Every student, faculty, and staff member is eligible to obtain a card with government-issued photo identification and open Cougar Bucks and Bank of Edwardsville debit accounts. 
 				For additional information about Cougar Cards, please visit the Cougar Card website, see helpful links.</p>
 			</div>
 
 			<button class="accordion">What if I lose my ID card?</button>
-			<div class="panel">
+			<div class="panel eventdesc">
 				<p>A lost/stolen card can be deactivated through My Cougar Card at the MySIUE portal. A fee of $15 may be assessed for a replacement card. If the card has banking functions, you will need to call the Cougar Banking Center at (618) 655-0780 to discontinue the banking functions of the card.
 				You can reactivate a lost card that has been found. You can reactivate only your most recent card. Old cards cannot be reactivated. 
 				Reactivation can be done from My Cougar Card at the MySIUE portal. The option to report and reactivate lost card will appear only if you have reported your card lost.</p>
 			</div>
 
 			<button class="accordion">Can we have guests in the Residence Halls/Cougar Village?</button>
-			<div class="panel">
+			<div class="panel eventdesc">
 				<p>Visitors must stop at the front desk and register. The guest must leave a valid picture ID and must be escorted by a resident host.
 				This visitation policy allows you to have guest between the hours of 8:00 am and 2:00 am. Anyone staying past 2:00 am is considered an overnight guest and must be approved in advance if you live in Bluff, Prairie, or Woodland Halls. Overnight guest form must be submitted by 2 a.m. or when the guest arrives. 
 				See helpful links for additional information. </p>
 			</div>
 
 			<button class="accordion">Where can I do my laundry?</button>
-			<div class="panel">
+			<div class="panel eventdesc">
 			  <p>Each residence hall and Cougar Village has laundry facilities.</p>
 			</div>
 
 			<button class="accordion">What are the hours of the...?</button>
-			<div class="panel">
+			<div class="panel eventdesc">
 				<p>Lovejoy Library: please refer to the SIUE Lovejoy Library website
 				See helpful links.</p>
 			</div>
@@ -267,11 +274,12 @@ for (i = 0; i < acc.length; i++) {
     acc[i].onclick = function(){
         this.classList.toggle("active");
         this.nextElementSibling.classList.toggle("show");
+		
   }
 }
 </script>
 <script type="text/javascript">
-	$('.question').click(function () {
+	/*$('.question').click(function () {
 		$(this).toggleClass('active');
 	});
 	$('.day').click(function () {
@@ -288,6 +296,6 @@ for (i = 0; i < acc.length; i++) {
 	});
 	$('.day4events').click(function () {
 		$(this).toggleClass('active');
-	});
+	});*/
 </script>
 </html>
