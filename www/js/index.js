@@ -96,10 +96,10 @@ $(document).ready(function(){
         timeout: 5000,
         success: function(data, status){
             $.each(data, function(i,item){ 
-                var link = '<p><a href="' 
+                var link = '<a class="helpLink" href="' 
                     + item.description + '" onclick="window.open(' + "'" 
                     + item.description + "', '_system');" + '">' 
-                    + item.title + '</a></p>';
+                    + item.title + '</a><br><br>';
                 output.append(link);
             });
         },
