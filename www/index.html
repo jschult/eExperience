@@ -204,58 +204,7 @@ window.addEventListener('load', loaded, false);
 			<div id="links"></div>
 			<h2>Frequently Asked Questions<!--<br><span class="tip">(Tap questions to expand/collapse)</span>--></h2><hr>
 			
-			<button class="accordion">Where do I get my books?</button>
-			<div class="panel eventdesc">
-				<p>Textbook Service, located at 200 University Park Drive, Room 1121, rents textbooks to undergraduate students for a nominal fee. Supplemental texts, graduate textbooks, and other classroom supplies are sold through the University Bookstore which is located on the first floor of the Morris University Center. For information about Textbook Service, call (618) 650-3020 or e-mail to textbook@siue.edu. Additional information may be obtained from the website, see helpful links.
-				THE SIUE Experience will also be hosting “trips to Textbook Services” during our SIUE Central session. Please check the SIUE Experience schedule for more details!
-				</p>
-			</div>
-
-			<button class="accordion">Where do I get a parking permit?</button>
-			<div class="panel eventdesc">
-				<p>Parking Services manages the sale of hang tags for parking on University premises. All students who park a vehicle on University property must purchase and display a current, valid SIUE permit. For Parking information, please consult the helpful links.</p>
-			</div>
-
-			<button class="accordion">Where can I find a job on campus?</button>
-			<div class="panel eventdesc">
-				<p>The student employment staff of Student Financial Aid maintains a database of on-campus and off-campus jobs online, see helpful links. Students meeting University eligibility requirements for student employment can search the database for information on jobs and employers. As many as 1,000 jobs may be listed at peak employment periods. Students needing further assistance may call (618) 650-2563, or visit the office in Rendleman Hall, Room 2221.</p>
-			</div>
-
-			<button class="accordion">Where is _______ (EVEYTHING)?</button>
-			<div class="panel eventdesc">
-			  <p>See Campus Map. (helpful links)</p>
-			</div>
-
-			<button class="accordion">What can I use my ID card (Cougar Card) for?</button>
-			<div class="panel eventdesc">
-				<p>Your Cougar Card is an all-purpose card that is required for identification, meal plans, debit plans, vending, admittance to SIUE buildings and event. Every student, faculty, and staff member is eligible to obtain a card with government-issued photo identification and open Cougar Bucks and Bank of Edwardsville debit accounts. 
-				For additional information about Cougar Cards, please visit the Cougar Card website, see helpful links.</p>
-			</div>
-
-			<button class="accordion">What if I lose my ID card?</button>
-			<div class="panel eventdesc">
-				<p>A lost/stolen card can be deactivated through My Cougar Card at the MySIUE portal. A fee of $15 may be assessed for a replacement card. If the card has banking functions, you will need to call the Cougar Banking Center at (618) 655-0780 to discontinue the banking functions of the card.
-				You can reactivate a lost card that has been found. You can reactivate only your most recent card. Old cards cannot be reactivated. 
-				Reactivation can be done from My Cougar Card at the MySIUE portal. The option to report and reactivate lost card will appear only if you have reported your card lost.</p>
-			</div>
-
-			<button class="accordion">Can we have guests in the Residence Halls/Cougar Village?</button>
-			<div class="panel eventdesc">
-				<p>Visitors must stop at the front desk and register. The guest must leave a valid picture ID and must be escorted by a resident host.
-				This visitation policy allows you to have guest between the hours of 8:00 am and 2:00 am. Anyone staying past 2:00 am is considered an overnight guest and must be approved in advance if you live in Bluff, Prairie, or Woodland Halls. Overnight guest form must be submitted by 2 a.m. or when the guest arrives. 
-				See helpful links for additional information. </p>
-			</div>
-
-			<button class="accordion">Where can I do my laundry?</button>
-			<div class="panel eventdesc">
-			  <p>Each residence hall and Cougar Village has laundry facilities.</p>
-			</div>
-
-			<button class="accordion">What are the hours of the...?</button>
-			<div class="panel eventdesc">
-				<p>Lovejoy Library: please refer to the SIUE Lovejoy Library website
-				See helpful links.</p>
-			</div>
+			<div id="faqs"></div>
 
 		</div>
 	</div> <!--slider-->
@@ -265,18 +214,6 @@ window.addEventListener('load', loaded, false);
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript">
 	app.initialize();
-</script>
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function(){
-        this.classList.toggle("active");
-        this.nextElementSibling.classList.toggle("show");
-		
-  }
-}
 </script>
 <script type="text/javascript">
 	/*$('.question').click(function () {
