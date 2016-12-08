@@ -1,0 +1,238 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, height=device-height">
+<meta name="msapplication-tap-highlight" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>SIUE eExperience Mobile</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/twis.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript">
+function loaded() {
+	myScroll = new TWIS('#wrapper');
+	
+/*
+	// Test scrollY and scrollToPage
+	setTimeout(function () {
+		myScroll.scrollToPage(3, 500);
+	}, 1000);
+
+	setTimeout(function () {
+		myScroll.scrollY(-1000, 1500);
+	}, 2000);
+*/
+	// Free some mem
+	window.removeEventListener('load', loaded, false);
+}
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+window.addEventListener('click', function (e) { e.preventDefault(); }, false);
+window.addEventListener('load', loaded, false);
+</script>
+
+</head>
+<body>
+<header>
+	<ul>
+	<!-- Konstantin Rudy: https://github.com/k-rudy/phonegap-twitter-timeline -->
+		<li id="navButtonL" onclick="twitter()"><!--Open Twitter in-app-browser-->Twitt<span class="logo_e">e</span>r</li>
+		<li id="logo_group"><span class="logo_e">e</span>Experience</li>
+		<li id="navButtonR" onclick="surveys()"><!--Open Qualtrix in-app-browser-->Surv<span class="logo_e">e</span>ys</li>
+	</ul>
+</header>
+
+<div id="wrapper">
+	<div id="slider">
+		<div class="page">
+			<img src="img/welcome.png" style="height:auto;width:100%;padding-top:4%;">
+			<hr>
+			<p align="center">Welcome to the eExperience mobile app! This app is designed to assist students during <span style="font-weight: bold;">The SIUE Experience<span>!</p>
+			<h2 align="center"><span class="tip">(Swipe and Scroll to view additional content)</span></h2>
+			<hr>
+			<img src="img/welcome2.png" style="height:auto;width:100%;padding-bottom:6%;">
+		</div>
+
+		<div class="page">
+			<h2>Schedule</h2><hr>
+			<p class="day"> Thursday, August 18, 2016</p>
+				<button class="accordion">Residence Hall Move-In<br>8:00 am - 4:00 pm</button>
+				<div class="panel eventdesc">
+					<p>Bluff/Prairie/Woodland Halls<br><br>
+					The SIUE Experience begins for many new freshmen today! Hundreds of Move-In Crew volunteers make this process incredibly smooth so you’ll be on your way to unpack and unwind in no time. More information about University Housing Move-In is available at siue.edu/housing/movein.
+					Share your move-in pics using #SIUE20 and #SIUEExperience!</p>
+				</div>
+				<button class="accordion">Community Meetings<br>4:30 am - 6:00 pm</button>
+				<div class="panel eventdesc">
+					<p>Bluff/Prairie/Woodland Halls<br><br>
+					Check with your Resident Assistant (RA) for location
+					Living on campus is about more than just a place to sleep and study. This required orientation will help you be successful living in a new community. Check with your RA for speci c time and location.</p>
+				</div>
+				<button class="accordion">Commuter Meet-Up<br>5:00 pm - 5:30 pm</button>
+				<div class="panel eventdesc">
+					<p>Morris University Center (MUC)<br><br>
+					Living off campus this year? It is important to us that you are fully able to participate in the SIUE Experience! Come meet other new commuter students and then head downstairs to enjoy Freshman First Night together.</p>
+				</div>
+				<button class="accordion">Freshman First Night<br>6:00 pm</button>
+				<div class="panel eventdesc">
+					<p>Morris University Center (MUC)<br><br>
+					Class of 2020, join fellow  rst-year students for an unforgettable night packed with laughter, glowing entertainment and the best food on campus! Experience the MUC’s many dining options (bring your Cougar Card with meal plan or cash). Step into
+					the Illumabooth to create a glow photo or dress up with props at the open-air photo booth. Get a sugar rush from cotton candy or escape into the video game lounge. Be sure to stop by Cougar Lanes for a game of pool or Cosmic Bowling. Feeling crafty? Decorate a picture frame to remember the event, or make your own Spin Art creation. At the end of the night, show off your dance moves during the DJ dance party!
+					Post pics using #FFN2016 #SIUE20 #SIUEExperience</p>
+				</div>
+
+			<p class="day"> Friday, August 19, 2016</p>
+				<button class="accordion">Dining Services<br>7:30 am - 6:00 pm</button>
+				<div class="panel eventdesc">
+					<p>Morris University Center (MUC)<br><br>
+					Enjoy campus dining options like Center Court and Starbucks to fuel up for a busy day of The SIUE Experience. Meal plans, cash and credit cards accepted.</p>
+				</div>
+				<button class="accordion">Commuter Welcome Breakfast<br>8:00 am - 8:45 am</button>
+				<div class="panel eventdesc">
+					<p>MUC Fixins Restaurant<br><br>
+					If you are living off campus this year, make this your  rst stop for a light breakfast and information about The SIUE Experience! Meet your Cougar Guide, along with other commuter students, and enter a drawing for gas gift cards and other cool prizes.</p>
+				</div>
+				<button class="accordion">The SIUE Experience: Excellence, Integrity, Wisdom, Inclusion<br>9:00 am</button>
+				<div class="panel eventdesc">
+					<p>location<br>
+						<ul>
+							<li>description</li>
+							<li>description</li>
+						</ul>
+					</p>
+				</div>
+				<button class="accordion">New Student Convocation: Your SIUE Story Begins<br>12:00 pm</button>
+				<div class="panel eventdesc">
+					<p>location<br>description</p>
+				</div>
+				<button class="accordion">Class of 2020 Photo<br>12:45 pm</button>
+				<div class="panel eventdesc">
+					<p>location<br>description</p>
+				</div>
+				<button class="accordion">Commuter Meet-Up<br>1:00 pm - 1:15 pm</button>
+				<div class="panel eventdesc">
+					<p>location<br>description</p>
+				</div>
+				<button class="accordion">SIUE Central<br>2:00 pm - 4:30 pm</button>
+				<div class="panel eventdesc">
+					<p>location<br>description</p>
+				</div>
+				<button class="accordion">Tailgate Dinner<br>4:30 pm - 5:30 pm</button>
+				<div class="panel eventdesc">
+					<p>location<br>description</p>
+				</div>
+				<button class="accordion">Buses to Korte Stadium for Cougar Kick-Off!<br>5:30 pm - 6:00 pm</button>
+				<div class="panel eventdesc">
+					<p>location<br>description</p>
+				</div>
+				<button class="accordion">Cougar Kick-Off!<br>6:00 pm - 10:00 pm</button>
+				<div class="panel eventdesc">
+					<p>location<br>description</p>
+				</div>
+
+			<p class="day"> Saturday, August 20, 2016</p>
+				<button class="accordion">Dining Services<br>7:30 am - 10:00 pm</button>
+				<div class="panel eventdesc">
+					<p>location<br>description</p>
+				</div>
+				<button class="accordion">The SIUE Experience: Citizenship<br>8:45 am - 9:15 am</button>
+				<div class="panel eventdesc">
+					<p>location<br>description</p>
+				</div>
+				<button class="accordion">Class of 2020 Service Project<br>9:15 am - 1:00 pm</button>
+				<div class="panel eventdesc">
+					<p>location<br>description</p>
+				</div>
+				<button class="accordion">Be Greek BBQ<br>5:00 pm - 7:00 pm</button>
+				<div class="panel eventdesc">
+					<p>location<br>description</p>
+				</div>
+				<button class="accordion">Commuter Meet-Up<br>7:00 pm - 7:30 pm</button>
+				<div class="panel eventdesc">
+					<p>location<br>description</p>
+				</div>
+				<button class="accordion">Hypnotist Chris Carter<br>7:30 pm</button>
+				<div class="panel eventdesc">
+					<p>location<br>description</p>
+				</div>
+
+			<p class="day"> Sunday, August 21, 2016</p>
+				<button class="accordion">Dining Services<br>10:30 am - 10:00 pm</button>
+				<div class="panel eventdesc">
+					<p>location<br>description</p>
+				</div>
+				<button class="accordion">VIP Veterans<br>10:00 am - 11:00 am</button>
+				<div class="panel eventdesc">
+					<p>location<br>description</p>
+				</div>
+				<button class="accordion">Top Tips for Transfers<br>11:00 am - 1:00 pm</button>
+				<div class="panel eventdesc">
+					<p>location<br>description</p>
+				</div>
+				<button class="accordion">Be a Great Graduate Student<br>12:00 pm - 1:00 pm</button>
+				<div class="panel eventdesc">
+					<p>location<br>description</p>
+				</div>
+				<button class="accordion">SIUE Central<br>1:00 pm - 3:00 pm</button>
+				<div class="panel eventdesc">
+					<p>location<br>description</p>
+				</div>
+				<button class="accordion">Do SOMETHING!<br>1:00 pm - 3:00 pm</button>
+				<div class="panel eventdesc">
+					<p>location<br>description</p>
+				</div>
+				<button class="accordion">Commuter Meet-Up<br>2:30 pm - 3:00 pm</button>
+				<div class="panel eventdesc">
+					<p>location<br>description</p>
+				</div>
+				<button class="accordion">Bump, Set, Spike...and Sweets<br>3:00 pm - 5:00 pm</button>
+				<div class="panel eventdesc">
+					<p>location<br>description</p>
+				</div>
+				<button class="accordion">Wing Meetings<br>7:00 pm</button>
+				<div class="panel eventdesc">
+					<p>location<br>description</p>
+				</div>
+
+		</div>
+		
+		<div class="page">
+			<h2>Helpful Links</h2><hr>
+			<div id="links"></div>
+			<h2>Frequently Asked Questions<!--<br><span class="tip">(Tap questions to expand/collapse)</span>--></h2><hr>
+			
+			<div id="faqs"></div>
+
+		</div>
+	</div> <!--slider-->
+</div> <!--wrapper-->
+</body>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+	app.initialize();
+</script>
+<script type="text/javascript">
+	/*$('.question').click(function () {
+		$(this).toggleClass('active');
+	});
+	$('.day').click(function () {
+		$(this).toggleClass('active');
+	});
+	$('.day1events').click(function () {
+		$(this).toggleClass('active');
+	});
+	$('.day2events').click(function () {
+		$(this).toggleClass('active');
+	});
+	$('.day3events').click(function () {
+		$(this).toggleClass('active');
+	});
+	$('.day4events').click(function () {
+		$(this).toggleClass('active');
+	});*/
+</script>
+</html>

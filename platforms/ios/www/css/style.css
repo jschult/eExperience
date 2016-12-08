@@ -1,0 +1,255 @@
+html, body {
+	height: 100%;
+}
+
+body,ul,li,h1,h2,p {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+body {
+	font-size: 16px;
+/*	-webkit-user-select:none;*/
+    -webkit-text-size-adjust: none;
+	font-family: helvetica;
+	background: #000;
+}
+
+button {
+	border-radius: 10px 10px 0px 0px;
+}
+
+header {
+	height: 40px; 
+	line-height: 40px;
+	/*display: block*/
+	background: #000;
+	font-size: 2em; 
+	font-weight: bold;
+	text-align: center;
+	margin-top: 2px;
+	margin-left: 1px;
+}
+
+header ul {
+	list-style-type: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+hr {
+	border: 1px solid #000;
+	margin-bottom: 2em;
+}
+
+p { 
+	margin-bottom: 2em; 
+}
+
+#logo_group {
+	font: Arial;
+	font-weight: bold;
+	font-size: 18px;
+	color: #000;
+	float: left;
+	background: #FFF;
+	width: 50vw;
+	border: 1px solid #000;
+	text-align: center;
+}
+
+#logo_group_b {
+	font: Arial;
+	font-weight: bold;
+	font-size: 18px;
+	color: #000;
+	float: left;
+	background: #FFF;
+	width: 49vw;
+	border: 1px solid #000;
+	text-align: center;
+}
+
+#navButtonL, #navButtonR {
+	font: Arial;
+	font-weight: bold;
+	font-size: 18px;
+	color: #FFF;
+	float: left;
+	clear: none;
+	background: #000;
+	width: 24.25vw;
+	text-align: center;
+}
+
+#navButtonL_b, #navButtonR_b {
+	font: Arial;
+	font-weight: bold;
+	font-size: 18px;
+	color: #FFF;
+	float: left;
+	clear: none;
+	background: #000;
+	width: 24vw;
+	text-align: center;
+}
+
+#navButtonL a:link, #navButtonL_b a:link, #navButtonR a:link, #navButtonR_b a:link {
+	color: #FFF;
+}
+
+#navButtonL a:hover, #navButtonL_b a:hover, #navButtonR a:hover, #navButtonR_b a:hover {
+	color: #000;
+	background: #FFF;
+}
+
+#navButtonL, #navButtonL_b {
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	border-left: 1px solid #000;
+	border-radius: 10px 0px 0px 10px;
+	margin-left: 2px;
+}
+
+#navButtonR, #navButtonR_b {
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	border-right: 1px solid #000;
+	border-radius: 0px 10px 10px 0px;
+	margin-right: 2px;
+}
+
+#wrapper {
+	position: absolute;
+	z-index: 1;
+	top: 7.1%; 
+	bottom: 2px;
+	width: 98vw;
+	background: #F00;
+	overflow: hidden;
+}
+
+#slider {
+	position: relative;
+	z-index: 1;
+	float: left;
+	padding-bottom: 1%;
+	width: 300vw;
+	min-height: 100vh;
+	-webkit-transform: translate3d(0,0,0);
+}
+
+.active {
+	color: #33C;
+}
+
+.day {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.day1events, .day2events, .day3events, .day4events {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.event {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.eventdesc {
+	font-size: 14px;
+	margin-top: -2.5px;
+	border-left: 3px solid #F00;
+	border-right: 3px solid #F00;
+	border-bottom: 3px solid #F00;
+	border-radius: 0px 0px 10px 10px;
+	background-color: #DDD;
+}
+
+.helpLink {
+	
+}
+
+.logo_e {
+	color: #F00;
+}
+
+.page {
+	-webkit-box-sizing: border-box;
+	position: relative;
+	z-index: 2;
+	display: block;
+	float: left;
+	width: 94vw;
+	min-height: 100vh;
+	padding-top: 0.6%;
+	padding-left: 2%;
+	padding-right: 2%;
+	margin-left: 0.7%;
+	margin-bottom: 15vh;
+	background: #FFF;
+	-webkit-transform: translate3d(0,0,0);
+	border-radius: 5px;
+}
+
+.question {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.tip {
+	font-size: 12px;
+	color: #333;
+}
+
+.test {
+	text-align: center;
+}
+
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: 3px solid #F00;
+	/*box-shadow: 3px 3px 3px 3px #666;*/
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+	/*box-shadow: 3px 0 3px 0 #666;*/
+}
+
+button.accordion:after {
+    content: '\02795';
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2796";
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+}
+
+div.panel.show {
+    opacity: 1;
+    max-height: 500px;
+}
