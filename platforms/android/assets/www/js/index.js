@@ -109,14 +109,41 @@ $(document).ready(function(){
     });
 });
 
-
+$(document).ready(function(){
+    $(document).bind('deviceready', function(){
+        onDeviceReady();
+    });
+    var output = $('#thursday');
+    $.ajax({
+        url: 'https://siueexperience.isg.siue.edu/thursday.php',
+        dataType: 'jsonp',
+        jsonp: 'jsoncallback',
+        timeout: 5000,
+        success: function(data, status){
+            $.each(data, function(i,item){ 
+                var link = '<button class="accordion">' + item.title + '<br>' + item.stime + ' - ' + item.etime + '</button> <div class="panel eventdesc"> <p><br>' + item.location + '<br><br>' + item.description + '</p> </div>';
+                output.append(link);
+            });
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            for (i = 0; i < acc.length; i++) {
+                acc[i].onclick = function(){
+                    this.classList.toggle("active");
+                    this.nextElementSibling.classList.toggle("show");
+                }
+            }
+        },
+        error: function(){
+           output.text('There was an error loading the data.');
+        }
+    });
+});
 
 $(document).ready(function(){
     $(document).bind('deviceready', function(){
         onDeviceReady();
     });
     var output = $('#faqs');
-    var n = 1;
     $.ajax({
         url: 'https://siueexperience.isg.siue.edu/faq.php',
         dataType: 'jsonp',
@@ -141,12 +168,3 @@ $(document).ready(function(){
         }
     });
 });
-
-
-// var day = data[1];
-
-//         <button class="accordion">What are the hours of the...?</button>
-//             <div class="panel eventdesc">
-//                 <p>Lovejoy Library: please refer to the SIUE Lovejoy Library website
-//                 See helpful links.</p>
-//             </div>

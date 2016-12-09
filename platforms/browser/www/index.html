@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -10,15 +9,13 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="twis.js"></script>
-<link href="style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/twis.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css">
 
 <script type="text/javascript">
-var myScroll;
-
 function loaded() {
 	myScroll = new TWIS('#wrapper');
-
+	
 /*
 	// Test scrollY and scrollToPage
 	setTimeout(function () {
@@ -29,11 +26,11 @@ function loaded() {
 		myScroll.scrollY(-1000, 1500);
 	}, 2000);
 */
-
 	// Free some mem
 	window.removeEventListener('load', loaded, false);
 }
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+window.addEventListener('click', function (e) { e.preventDefault(); }, false);
 window.addEventListener('load', loaded, false);
 </script>
 
@@ -41,57 +38,75 @@ window.addEventListener('load', loaded, false);
 <body>
 <header>
 	<ul>
-		<li id="navButtonL"><!--Open Twitter in browser-->Twitt<span class="logo_e">e</span>r</li>
+	<!-- Konstantin Rudy: https://github.com/k-rudy/phonegap-twitter-timeline -->
+		<li id="navButtonL" onclick="twitter()"><!--Open Twitter in-app-browser-->Twitt<span class="logo_e">e</span>r</li>
 		<li id="logo_group"><span class="logo_e">e</span>Experience</li>
-		<li id="navButtonR"><!--Open Qualtrix in browser-->Surv<span class="logo_e">e</span>ys</li>
+		<li id="navButtonR" onclick="surveys()"><!--Open Qualtrix in-app-browser-->Surv<span class="logo_e">e</span>ys</li>
 	</ul>
 </header>
 
 <div id="wrapper">
 	<div id="slider">
 		<div class="page">
-			<h1>Welcome to the<br> SIUE eExperience<br> Mobile Application!</h1>
-			<p>This application was designed to serve as a companion to the New Student Orientation program for Southern Illinois University Edwardsville. The app is designed to hold three pages, which users can swipe right to discover. This first page will serve as the Welcome page, explaining the purpose of the SIUE Experience program. The second page, to the right of this one, will house a day-by-day schedule for the SIUE Experience. The third page will house a series of helpful links for new students to SIUE, followed by a list of Frequently Asked Questions. The schedule and Links/FAQ pages will feature headings that can be tapped to expand or collapse the content within. The rest of the content on these demo pages are in Latin, so enjoy!</p>
-			<h2>Heading 2</h2>
-			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-			<h3>Heading 3</h3>
-			<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
-		</div>
-
-		<div class="page">
-			<h1>Page 2</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			<h4>Heading 4</h4>
-			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-			<h5>Heading 5</h5>
-			<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
-		</div>
-
-		<div class="page">
-			<h2>Helpful Links</h2>
-			<p><a href="www.siue.edu" onclick="window.open('http://www.siue.edu', '_system');">SIUE Homepage</a></p><br>
-			<p><a href="www.siue.edu/registrar" onclick="window.open('http://www.siue.edu/registrar', '_system');">SIUE Registrar Homepage</a></p><br>
-			<h2>Frequently Asked Questions<br><span class="tip">(Tap questions to expand/collapse)</span></h2><br>
-			<p class="question" data-toggle="collapse" data-target=".answer1">
-				What should I bring to Springboard to Success?
-			</p>
-			<p class="answer1 collapse">
-				You will need to bring your student ID number (found in your admission packet), photo identification (such as a driver's license or state-issued identification card), any personal items required for an overnight stay (we provide linens and towels, but other than this, if you need it to start or end your day, please bring it with you), comfortable clothing and shoes (you will be walking around campus), and a sweatshirt or jacket.
-			</p>
+			<img src="img/welcome.png" style="height:auto;width:100%;padding-top:4%;">
 			<hr>
-			<h3>Heading 3</h3>
-			<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+			<p align="center">Welcome to the eExperience mobile app! This app is designed to assist students during <span style="font-weight: bold;">The SIUE Experience<span>!</p>
+			<h2 align="center"><span class="tip">(Swipe and Scroll to view additional content)</span></h2>
+			<hr>
+			<img src="img/welcome2.png" style="height:auto;width:100%;padding-bottom:6%;">
+		</div>
+
+		<div class="page">
+			<h2>Schedule</h2><hr>
+
+			<p class="day"> Thursday, August 18, 2016</p>
+				<div id="thursday"></div>
+
+			<p class="day"> Friday, August 19, 2016</p>
+				<div id="friday"></div>
+
+			<p class="day"> Saturday, August 20, 2016</p>
+				<div id="saturday"></div>
+
+			<p class="day"> Sunday, August 21, 2016</p>
+				<div id="sunday"></div>
+
+		</div>
+		
+		<div class="page">
+			<h2>Helpful Links</h2><hr>
+			<div id="links"></div>
+			<h2>Frequently Asked Questions<!--<br><span class="tip">(Tap questions to expand/collapse)</span>--></h2><hr>
+			
+			<div id="faqs"></div>
+
 		</div>
 	</div> <!--slider-->
 </div> <!--wrapper-->
 </body>
-<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript">
 	app.initialize();
 </script>
 <script type="text/javascript">
-	$('.question').click(function () {
+	/*$('.question').click(function () {
 		$(this).toggleClass('active');
 	});
+	$('.day').click(function () {
+		$(this).toggleClass('active');
+	});
+	$('.day1events').click(function () {
+		$(this).toggleClass('active');
+	});
+	$('.day2events').click(function () {
+		$(this).toggleClass('active');
+	});
+	$('.day3events').click(function () {
+		$(this).toggleClass('active');
+	});
+	$('.day4events').click(function () {
+		$(this).toggleClass('active');
+	});*/
 </script>
 </html>

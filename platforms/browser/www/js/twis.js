@@ -34,7 +34,7 @@ var m = Math,
 	})(),
 
 	// Events
-	RESIZE_EV = 'onorientationchange' in window ? 'orientationchange' : 'resize',
+	RESIZE_EV = 'onorientationchange' ? 'orientationchange' : 'resize',
 	START_EV = hasTouch ? 'touchstart' : 'mousedown',
 	MOVE_EV = hasTouch ? 'touchmove' : 'mousemove',
 	END_EV = hasTouch ? 'touchend' : 'mouseup',
@@ -220,6 +220,8 @@ TWIS.prototype = {
 			newX = that.x + deltaX,
 			newY = that.y + deltaY,
 			timestamp = e.timeStamp || Date.now();
+			
+		this.refresh();
 
 		if (that.options.onBeforeScrollMove) that.options.onBeforeScrollMove.call(that, e);
 
