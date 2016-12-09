@@ -64,10 +64,14 @@ p {
 	font-weight: bold;
 	font-size: 18px;
 	color: #000;
-	float: left;
+	/*float: left;*/
 	background: #FFF;
-	width: 49vw;
-	border: 1px solid #000;
+	width: 94vw;
+	margin-left: 1.6%;
+	padding: auto 0 auto 0;
+	border: 2px solid #000;
+	height: 5.75vh;
+	border-radius: 5px;
 	text-align: center;
 }
 
