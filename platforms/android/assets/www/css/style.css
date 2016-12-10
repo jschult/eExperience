@@ -134,6 +134,16 @@ p {
 	overflow: hidden;
 }
 
+#surveywrapper {
+	position: absolute;
+	z-index: 1;
+	top: 0%; 
+	bottom: 2px;
+	width: 98vw;
+	background: #F00;
+	overflow: hidden;
+}
+
 #slider {
 	position: relative;
 	z-index: 1;
