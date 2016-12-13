@@ -113,13 +113,45 @@ $(document).ready(function(){
     $(document).bind('deviceready', function(){
         onDeviceReady();
     });
-    var output = $('#thursday');
+    var output = $('#faqs');
     $.ajax({
-        url: 'https://siueexperience.isg.siue.edu/thursday.php',
+        url: 'https://siueexperience.isg.siue.edu/faq.php',
         dataType: 'jsonp',
         jsonp: 'jsoncallback',
         timeout: 5000,
         success: function(data, status){
+            $.each(data, function(i,item){ 
+                var link = '<button class="accordion">' + item.question + '</button> <div class="panel eventdesc"> <p><br>' + item.answer + '</p> </div>';
+                output.append(link);
+            });
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            for (i = 0; i < acc.length; i++) {
+                acc[i].onclick = function(){
+                    this.classList.toggle("active");
+                    this.nextElementSibling.classList.toggle("show");
+                }
+            }
+        },
+        error: function(){
+           output.text('There was an error loading the data.');
+        }
+    });
+});
+
+
+$(document).ready(function(){
+    $(document).bind('deviceready', function(){
+        onDeviceReady();
+    });
+    var output = $('#monday');
+    $.ajax({
+        url: 'https://siueexperience.isg.siue.edu/monday.php',
+        dataType: 'jsonp',
+        jsonp: 'jsoncallback',
+        timeout: 5000,
+        success: function(data, status){
+            $(output).html('<p class="day"> '+data[0].day+"</p>");
             $.each(data, function(i,item){ 
                 var link = '<button class="accordion">' + item.title + '<br>' + item.stime + ' - ' + item.etime + '</button> <div class="panel eventdesc"> <p><br>' + item.location + '<br><br>' + item.description + '</p> </div>';
                 output.append(link);
@@ -143,15 +175,171 @@ $(document).ready(function(){
     $(document).bind('deviceready', function(){
         onDeviceReady();
     });
-    var output = $('#faqs');
+    var output = $('#tuesday');
     $.ajax({
-        url: 'https://siueexperience.isg.siue.edu/faq.php',
+        url: 'https://siueexperience.isg.siue.edu/tuesday.php',
         dataType: 'jsonp',
         jsonp: 'jsoncallback',
         timeout: 5000,
         success: function(data, status){
+            $(output).html('<p class="day"> '+data[0].day+"</p>");
             $.each(data, function(i,item){ 
-                var link = '<button class="accordion">' + item.question + '</button> <div class="panel eventdesc"> <p><br>' + item.answer + '</p> </div>';
+                var link = '<button class="accordion">' + item.title + '<br>' + item.stime + ' - ' + item.etime + '</button> <div class="panel eventdesc"> <p><br>' + item.location + '<br><br>' + item.description + '</p> </div>';
+                output.append(link);
+            });
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            for (i = 0; i < acc.length; i++) {
+                acc[i].onclick = function(){
+                    this.classList.toggle("active");
+                    this.nextElementSibling.classList.toggle("show");
+                }
+            }
+        },
+        error: function(){
+           output.text('There was an error loading the data.');
+        }
+    });
+});
+
+$(document).ready(function(){
+    $(document).bind('deviceready', function(){
+        onDeviceReady();
+    });
+    var output = $('#wednesday');
+    $.ajax({
+        url: 'https://siueexperience.isg.siue.edu/wednesday.php',
+        dataType: 'jsonp',
+        jsonp: 'jsoncallback',
+        timeout: 5000,
+        success: function(data, status){
+            $(output).html('<p class="day"> '+data[0].day+"</p>");
+            $.each(data, function(i,item){ 
+                var link = '<button class="accordion">' + item.title + '<br>' + item.stime + ' - ' + item.etime + '</button> <div class="panel eventdesc"> <p><br>' + item.location + '<br><br>' + item.description + '</p> </div>';
+                output.append(link);
+            });
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            for (i = 0; i < acc.length; i++) {
+                acc[i].onclick = function(){
+                    this.classList.toggle("active");
+                    this.nextElementSibling.classList.toggle("show");
+                }
+            }
+        },
+        error: function(){
+           output.text('There was an error loading the data.');
+        }
+    });
+});
+
+$(document).ready(function(){
+    $(document).bind('deviceready', function(){
+        onDeviceReady();
+    });
+    var output = $('#thursday');
+    $.ajax({
+        url: 'https://siueexperience.isg.siue.edu/thursday.php',
+        dataType: 'jsonp',
+        jsonp: 'jsoncallback',
+        timeout: 5000,
+        success: function(data, status){
+            $(output).html('<p class="day"> '+data[0].day+"</p>");
+            $.each(data, function(i,item){ 
+                var link = '<button class="accordion">' + item.title + '<br>' + item.stime + ' - ' + item.etime + '</button> <div class="panel eventdesc"> <p><br>' + item.location + '<br><br>' + item.description + '</p> </div>';
+                output.append(link);
+            });
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            for (i = 0; i < acc.length; i++) {
+                acc[i].onclick = function(){
+                    this.classList.toggle("active");
+                    this.nextElementSibling.classList.toggle("show");
+                }
+            }
+        },
+        error: function(){
+           output.text('There was an error loading the data.');
+        }
+    });
+});
+
+$(document).ready(function(){
+    $(document).bind('deviceready', function(){
+        onDeviceReady();
+    });
+    var output = $('#friday');
+    $.ajax({
+        url: 'https://siueexperience.isg.siue.edu/friday.php',
+        dataType: 'jsonp',
+        jsonp: 'jsoncallback',
+        timeout: 5000,
+        success: function(data, status){
+            $(output).html('<p class="day"> '+data[0].day+"</p>");
+            $.each(data, function(i,item){ 
+                var link = '<button class="accordion">' + item.title + '<br>' + item.stime + ' - ' + item.etime + '</button> <div class="panel eventdesc"> <p><br>' + item.location + '<br><br>' + item.description + '</p> </div>';
+                output.append(link);
+            });
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            for (i = 0; i < acc.length; i++) {
+                acc[i].onclick = function(){
+                    this.classList.toggle("active");
+                    this.nextElementSibling.classList.toggle("show");
+                }
+            }
+        },
+        error: function(){
+           output.text('There was an error loading the data.');
+        }
+    });
+});
+
+$(document).ready(function(){
+    $(document).bind('deviceready', function(){
+        onDeviceReady();
+    });
+    var output = $('#saturday');
+    $.ajax({
+        url: 'https://siueexperience.isg.siue.edu/saturday.php',
+        dataType: 'jsonp',
+        jsonp: 'jsoncallback',
+        timeout: 5000,
+        success: function(data, status){
+            $(output).html('<p class="day"> '+data[0].day+"</p>");
+            $.each(data, function(i,item){ 
+                var link = '<button class="accordion">' + item.title + '<br>' + item.stime + ' - ' + item.etime + '</button> <div class="panel eventdesc"> <p><br>' + item.location + '<br><br>' + item.description + '</p> </div>';
+                output.append(link);
+            });
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            for (i = 0; i < acc.length; i++) {
+                acc[i].onclick = function(){
+                    this.classList.toggle("active");
+                    this.nextElementSibling.classList.toggle("show");
+                }
+            }
+        },
+        error: function(){
+           output.text('There was an error loading the data.');
+        }
+    });
+});
+
+$(document).ready(function(){
+    $(document).bind('deviceready', function(){
+        onDeviceReady();
+    });
+    var output = $('#sunday');
+    $.ajax({
+        url: 'https://siueexperience.isg.siue.edu/sunday.php',
+        dataType: 'jsonp',
+        jsonp: 'jsoncallback',
+        timeout: 5000,
+        success: function(data, status){
+            $(output).html('<p class="day"> '+data[0].day+"</p>");
+            $.each(data, function(i,item){ 
+                var link = '<button class="accordion">' + item.title + '<br>' + item.stime + ' - ' + item.etime + '</button> <div class="panel eventdesc"> <p><br>' + item.location + '<br><br>' + item.description + '</p> </div>';
                 output.append(link);
             });
             var acc = document.getElementsByClassName("accordion");

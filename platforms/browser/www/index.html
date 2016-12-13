@@ -15,18 +15,6 @@
 <script type="text/javascript">
 function loaded() {
 	myScroll = new TWIS('#wrapper');
-	
-/*
-	// Test scrollY and scrollToPage
-	setTimeout(function () {
-		myScroll.scrollToPage(3, 500);
-	}, 1000);
-
-	setTimeout(function () {
-		myScroll.scrollY(-1000, 1500);
-	}, 2000);
-*/
-	// Free some mem
 	window.removeEventListener('load', loaded, false);
 }
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
@@ -39,9 +27,9 @@ window.addEventListener('load', loaded, false);
 <header>
 	<ul>
 	<!-- Konstantin Rudy: https://github.com/k-rudy/phonegap-twitter-timeline -->
-		<li id="navButtonL" onclick="twitter()"><!--Open Twitter in-app-browser-->Twitt<span class="logo_e">e</span>r</li>
+		<li id="navButtonL" onclick="twitter()">Twitt<span class="logo_e">e</span>r</li>
 		<li id="logo_group"><span class="logo_e">e</span>Experience</li>
-		<li id="navButtonR" onclick="surveys()"><!--Open Qualtrix in-app-browser-->Surv<span class="logo_e">e</span>ys</li>
+		<li id="navButtonR" onclick="surveys()">Surv<span class="logo_e">e</span>ys</li>
 	</ul>
 </header>
 
@@ -58,26 +46,19 @@ window.addEventListener('load', loaded, false);
 
 		<div class="page">
 			<h2>Schedule</h2><hr>
-
-			<p class="day"> Thursday, August 18, 2016</p>
-				<div id="thursday"></div>
-
-			<p class="day"> Friday, August 19, 2016</p>
-				<div id="friday"></div>
-
-			<p class="day"> Saturday, August 20, 2016</p>
-				<div id="saturday"></div>
-
-			<p class="day"> Sunday, August 21, 2016</p>
-				<div id="sunday"></div>
-
+			<div id="monday"></div>
+			<div id="tuesday"></div>
+			<div id="wednesday"></div>
+			<div id="thursday"></div>
+			<div id="friday"></div>
+			<div id="saturday"></div>
+			<div id="sunday"></div>
 		</div>
 		
 		<div class="page">
 			<h2>Helpful Links</h2><hr>
 			<div id="links"></div>
-			<h2>Frequently Asked Questions<!--<br><span class="tip">(Tap questions to expand/collapse)</span>--></h2><hr>
-			
+			<h2>Frequently Asked Questions</h2><hr>
 			<div id="faqs"></div>
 
 		</div>
@@ -90,23 +71,5 @@ window.addEventListener('load', loaded, false);
 	app.initialize();
 </script>
 <script type="text/javascript">
-	/*$('.question').click(function () {
-		$(this).toggleClass('active');
-	});
-	$('.day').click(function () {
-		$(this).toggleClass('active');
-	});
-	$('.day1events').click(function () {
-		$(this).toggleClass('active');
-	});
-	$('.day2events').click(function () {
-		$(this).toggleClass('active');
-	});
-	$('.day3events').click(function () {
-		$(this).toggleClass('active');
-	});
-	$('.day4events').click(function () {
-		$(this).toggleClass('active');
-	});*/
 </script>
 </html>
