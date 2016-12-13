@@ -156,6 +156,7 @@ $(document).ready(function(){
                 var link = '<button class="accordion">' + item.title + '<br>' + item.stime + ' - ' + item.etime + '</button> <div class="panel eventdesc"> <p><br>' + item.location + '<br><br>' + item.description + '</p> </div>';
                 output.append(link);
             });
+            output.append('<br>');
             var acc = document.getElementsByClassName("accordion");
             var i;
             for (i = 0; i < acc.length; i++) {
@@ -187,6 +188,7 @@ $(document).ready(function(){
                 var link = '<button class="accordion">' + item.title + '<br>' + item.stime + ' - ' + item.etime + '</button> <div class="panel eventdesc"> <p><br>' + item.location + '<br><br>' + item.description + '</p> </div>';
                 output.append(link);
             });
+            output.append('<br>');
             var acc = document.getElementsByClassName("accordion");
             var i;
             for (i = 0; i < acc.length; i++) {
@@ -218,6 +220,7 @@ $(document).ready(function(){
                 var link = '<button class="accordion">' + item.title + '<br>' + item.stime + ' - ' + item.etime + '</button> <div class="panel eventdesc"> <p><br>' + item.location + '<br><br>' + item.description + '</p> </div>';
                 output.append(link);
             });
+            output.append('<br>');
             var acc = document.getElementsByClassName("accordion");
             var i;
             for (i = 0; i < acc.length; i++) {
@@ -249,6 +252,7 @@ $(document).ready(function(){
                 var link = '<button class="accordion">' + item.title + '<br>' + item.stime + ' - ' + item.etime + '</button> <div class="panel eventdesc"> <p><br>' + item.location + '<br><br>' + item.description + '</p> </div>';
                 output.append(link);
             });
+            output.append('<br>');
             var acc = document.getElementsByClassName("accordion");
             var i;
             for (i = 0; i < acc.length; i++) {
@@ -280,6 +284,7 @@ $(document).ready(function(){
                 var link = '<button class="accordion">' + item.title + '<br>' + item.stime + ' - ' + item.etime + '</button> <div class="panel eventdesc"> <p><br>' + item.location + '<br><br>' + item.description + '</p> </div>';
                 output.append(link);
             });
+            output.append('<br>');
             var acc = document.getElementsByClassName("accordion");
             var i;
             for (i = 0; i < acc.length; i++) {
@@ -311,6 +316,7 @@ $(document).ready(function(){
                 var link = '<button class="accordion">' + item.title + '<br>' + item.stime + ' - ' + item.etime + '</button> <div class="panel eventdesc"> <p><br>' + item.location + '<br><br>' + item.description + '</p> </div>';
                 output.append(link);
             });
+            output.append('<br>');
             var acc = document.getElementsByClassName("accordion");
             var i;
             for (i = 0; i < acc.length; i++) {
@@ -342,6 +348,7 @@ $(document).ready(function(){
                 var link = '<button class="accordion">' + item.title + '<br>' + item.stime + ' - ' + item.etime + '</button> <div class="panel eventdesc"> <p><br>' + item.location + '<br><br>' + item.description + '</p> </div>';
                 output.append(link);
             });
+            output.append('<br>');
             var acc = document.getElementsByClassName("accordion");
             var i;
             for (i = 0; i < acc.length; i++) {
