@@ -3,7 +3,7 @@
     <feature name="Device">
         <param name="browser-package" value="Device" />
     </feature>
-    <name>SIUE eExperience</name>
+    <name>SIUE Experience</name>
     <description>SIUE Experience Mobile App</description>
     <author email="@siue.edu" href="http://siue.edu">SIUE</author>
     <content src="index.html" />

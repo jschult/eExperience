@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.phonegap.SIUEeExperience" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>SIUE eExperience</name>
+    <name>SIUE Experience</name>
     <description>SIUE Experience Mobile App</description>
     <author email="@siue.edu" href="http://siue.edu">SIUE</author>
     <content src="index.html" />
