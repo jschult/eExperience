@@ -12,6 +12,7 @@
 <script type="text/javascript" src="js/twis.js"></script>
 <link href="css/style.css" rel="stylesheet" type="text/css">
 
+<!-- js for page swipe and scroll up/down -->
 <script type="text/javascript">
 function loaded() {
 	myScroll = new TWIS('#wrapper');
@@ -24,6 +25,8 @@ window.addEventListener('load', loaded, false);
 
 </head>
 <body>
+
+<!-- nav bar -->
 <header>
 	<ul>
 	<!-- Konstantin Rudy: https://github.com/k-rudy/phonegap-twitter-timeline -->
@@ -44,6 +47,9 @@ window.addEventListener('load', loaded, false);
 			<img src="img/welcome2.png" style="height:auto;width:100%;padding-bottom:6%;">
 		</div>
 
+		<!-- Populates from JSON pages 
+		monday.php, tuesday.php, wednesday.php, thursday.php, friday.php, saturday.php, sunday.php, 
+		only populates the day if the data exists, since schedule is usually Thursday->Sunday -->
 		<div class="page">
 			<h2>Schedule</h2><hr>
 			<div id="monday"></div>
@@ -54,7 +60,8 @@ window.addEventListener('load', loaded, false);
 			<div id="saturday"></div>
 			<div id="sunday"></div>
 		</div>
-		
+
+		<!-- Populates from JSON pages links.php and faq.php on the server -->
 		<div class="page">
 			<h2>Helpful Links</h2><hr>
 			<div id="links"></div>

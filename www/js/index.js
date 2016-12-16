@@ -49,13 +49,18 @@ var app = {
     }
 };
 
+// function to open twitter page with nav bar button
 function twitter(){
     var ref = window.open('twitterfeed.html', '_blank', 'location=no');    
 };
 
+// function to open survey page with nav bar button
 function surveys(){
     var ref = window.open('surveys.html', '_blank', 'location=no');    
 };
+
+// Each of the functions below pulls the respective JSON data 
+// from the server and gives it necessary formatting for display
 
 $(document).ready(function(){
     $(document).bind('deviceready', function(){
